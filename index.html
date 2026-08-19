@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upscale | Software Development & AI Solutions</title>
+  <meta name="description" content="Upscale is a professional technology team specializing in full-stack development, web and mobile applications, AI engineering, backend development, prompt engineering, and software testing.">
+  
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Upscale | Software Development & AI Solutions">
+  <meta property="og:description" content="Ideas • Code • Grow. Professional 6-member software engineering team for real-world client projects.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo" aria-label="Upscale Home">
+        <img src="assets/logo-dark-mode.png" alt="Upscale Logo" class="brand-logo-img brand-logo-dark">
+        <img src="assets/logo-transparent.png" alt="Upscale Logo" class="brand-logo-img brand-logo-light">
+      </a>
+      
+      <nav id="nav-menu">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#technologies" class="nav-link">Technologies</a></li>
+          <li><a href="#team" class="nav-link">Team</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light and Dark Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem;">Start a Project</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= 2. HERO SECTION ================= -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <i class="fa-solid fa-sparkles"></i> Ideas • Code • Grow
+            </div>
+            <h1 class="hero-title">Turn Your Ideas Into <span>Digital Solutions</span></h1>
+            <p class="hero-desc">
+              Upscale is a professional technology team specializing in Web Development, Mobile Applications, Full-Stack Development, AI Engineering, Backend Development, and Software Testing.
+            </p>
+            <p class="hero-subdesc">
+              From understanding your idea to development, testing, and delivery, we work together to transform requirements into reliable digital products.
+            </p>
+            <div class="hero-ctas">
+              <a href="#contact" class="btn btn-primary">
+                Start Your Project <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                Explore Our Work
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="floating-tech-pill">6-Member Tech Team</div>
+            <div class="hero-visual-card">
+              <div class="code-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="code-title">upscale-stack-architecture.config</span>
+              </div>
+              <div class="visual-badges-grid">
+                <div class="v-badge-card">
+                  <div class="v-badge-icon"><i class="fa-solid fa-layer-group"></i></div>
+                  <div class="v-badge-info">
+                    <h4>Full-Stack</h4>
+                    <p>React, Java, Node</p>
+                  </div>
+                </div>
+                <div class="v-badge-card">
+                  <div class="v-badge-icon"><i class="fa-solid fa-brain"></i></div>
+                  <div class="v-badge-info">
+                    <h4>AI Engineering</h4>
+                    <p>LLM, Prompts, Python</p>
+                  </div>
+                </div>
+                <div class="v-badge-card">
+                  <div class="v-badge-icon"><i class="fa-solid fa-server"></i></div>
+                  <div class="v-badge-info">
+                    <h4>Backend & Cloud</h4>
+                    <p>REST APIs, AWS, SQL</p>
+                  </div>
+                </div>
+                <div class="v-badge-card">
+                  <div class="v-badge-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+                  <div class="v-badge-info">
+                    <h4>QA & Testing</h4>
+                    <p>API & Regression QA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. ABOUT SECTION ================= -->
+    <section class="section section-dark" id="about" style="background: #0B1120;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.3); color: #FF6B00; font-size: 0.75rem; padding: 0.25rem 0.85rem; border-radius: 99px;">• ABOUT UPSCALE •</span>
+          <h2 class="section-title" style="font-size: 2.8rem; font-weight: 900; margin-top: 0.5rem; margin-bottom: 0.5rem;">We Build Technology That Moves Ideas Forward</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-col">
+            <p class="about-lead-p" style="font-size: 1.1rem; line-height: 1.8; color: #CBD5E1; margin-bottom: 1.25rem;">
+              Upscale is a collaborative six-member technology team bringing together expertise across frontend development, backend development, full-stack engineering, AI engineering, prompt engineering, research, databases, cloud technologies, and software testing.
+            </p>
+            <p class="about-sub-p" style="font-size: 1rem; line-height: 1.7; color: #94A3B8; margin-bottom: 1.5rem;">
+              We work on real-world software projects and collaborate closely to understand requirements, plan solutions, develop products, test them thoroughly, and deliver reliable digital solutions.
+            </p>
+
+            <div class="about-highlight-box">
+              <h3>One Team. Multiple Skills. Complete Solutions.</h3>
+              <p>We eliminate technical silos by bringing developers, database specialists, prompt engineers, and QA testers into a unified project workflow.</p>
+            </div>
+          </div>
+
+          <div class="feature-cards-grid">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-cubes"></i></div>
+              <h4>Full-Stack Expertise</h4>
+              <p>Seamless integration between frontend user interfaces and robust backend logic.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h4>AI & Modern Tech</h4>
+              <p>Leveraging cutting-edge AI engineering and prompt optimization for smart apps.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-check-double"></i></div>
+              <h4>Quality-Focused</h4>
+              <p>Dedicated QA testing across APIs, UI, regression, and database integrity.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
+              <h4>End-to-End Delivery</h4>
+              <p>Structured execution from initial concept analysis to final deployment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. SERVICES SECTION ================= -->
+    <section class="section section-dark" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Services</span>
+          <h2 class="section-title">What We Do</h2>
+          <p class="section-subtitle">Technology expertise for real-world digital products.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3 class="service-title">Full-Stack Development</h3>
+            <p class="service-desc">Complete web applications combining modern frontend, backend, APIs, databases, authentication, and integrations.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-desc">Responsive and modern websites and web applications designed around user and business requirements.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3 class="service-title">Mobile App Development</h3>
+            <p class="service-desc">Modern mobile applications using React Native and related cross-platform technologies.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+            <h3 class="service-title">Backend Development</h3>
+            <p class="service-desc">Scalable backend systems, REST APIs, business logic, authentication, database integration, and server-side development.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+            <h3 class="service-title">AI Engineering</h3>
+            <p class="service-desc">AI-powered applications, intelligent features, AI integrations, and automation solutions.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h3 class="service-title">Prompt Engineering</h3>
+            <p class="service-desc">Professional prompt design, optimization, testing, and AI workflow development.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+            <h3 class="service-title">Software Testing</h3>
+            <p class="service-desc">Manual testing, API testing, database testing, retesting, regression testing, and quality assurance.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+            <h3 class="service-title">Database Solutions</h3>
+            <p class="service-desc">SQL, PL/SQL, MongoDB, database integration, queries, and database testing.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3 class="service-title">Cloud & Deployment</h3>
+            <p class="service-desc">AWS-based solutions, application deployment, configuration, and cloud integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. TECHNOLOGIES SECTION ================= -->
+    <section class="section section-dark" id="technologies" style="background: #0B1120;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.3); color: #FF6B00; font-size: 0.75rem; padding: 0.25rem 0.85rem; border-radius: 99px;">• STACK & SKILLS •</span>
+          <h2 class="section-title" style="font-size: 2.8rem; font-weight: 900; margin-top: 0.5rem; margin-bottom: 0.5rem;">Our Technology Stack</h2>
+          <p class="section-subtitle" style="color: #94A3B8; font-size: 1.05rem;">Modern frameworks, languages, and testing toolsets powering our client solutions.</p>
+        </div>
+
+        <div class="tech-grid">
+          <!-- Frontend -->
+          <div class="tech-category-card">
+            <div class="tech-category-header">
+              <i class="fa-solid fa-code tech-cat-icon"></i>
+              <h3>Frontend</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-badge"><i class="fa-brands fa-react"></i> React.js</span>
+              <span class="tech-badge"><i class="fa-solid fa-mobile"></i> React Native</span>
+              <span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="tech-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+              <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="tech-badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+              <span class="tech-badge"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="tech-category-card">
+            <div class="tech-category-header">
+              <i class="fa-solid fa-gears tech-cat-icon"></i>
+              <h3>Backend</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-badge"><i class="fa-brands fa-java"></i> Java</span>
+              <span class="tech-badge"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+              <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="tech-badge"><i class="fa-solid fa-network-wired"></i> Django</span>
+              <span class="tech-badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+              <span class="tech-badge"><i class="fa-solid fa-arrows-split-up-and-left"></i> REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="tech-category-card">
+            <div class="tech-category-header">
+              <i class="fa-solid fa-database tech-cat-icon"></i>
+              <h3>Databases</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-badge"><i class="fa-solid fa-table"></i> SQL</span>
+              <span class="tech-badge"><i class="fa-solid fa-database"></i> PL/SQL</span>
+              <span class="tech-badge"><i class="fa-solid fa-envira"></i> MongoDB</span>
+            </div>
+          </div>
+
+          <!-- AI & Data -->
+          <div class="tech-category-card">
+            <div class="tech-category-header">
+              <i class="fa-solid fa-brain tech-cat-icon"></i>
+              <h3>AI & Data</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-badge"><i class="fa-solid fa-microchip"></i> AI Engineering</span>
+              <span class="tech-badge"><i class="fa-solid fa-terminal"></i> Prompt Engineering</span>
+              <span class="tech-badge"><i class="fa-solid fa-chart-line"></i> Pandas</span>
+            </div>
+          </div>
+
+          <!-- Testing -->
+          <div class="tech-category-card">
+            <div class="tech-category-header">
+              <i class="fa-solid fa-vial-circle-check tech-cat-icon"></i>
+              <h3>Testing & QA</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-badge"><i class="fa-solid fa-user-check"></i> Manual Testing</span>
+              <span class="tech-badge"><i class="fa-solid fa-plug"></i> API Testing</span>
+              <span class="tech-badge"><i class="fa-solid fa-hard-drive"></i> Database Testing</span>
+              <span class="tech-badge"><i class="fa-solid fa-rotate-right"></i> Retesting</span>
+            </div>
+          </div>
+
+          <!-- Tools & Cloud -->
+          <div class="tech-category-card">
+            <div class="tech-category-header">
+              <i class="fa-solid fa-cloud-arrow-up tech-cat-icon"></i>
+              <h3>Tools & Cloud</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span class="tech-badge"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="tech-badge"><i class="fa-brands fa-aws"></i> AWS</span>
+              <span class="tech-badge"><i class="fa-solid fa-file-word"></i> Office.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 6. TEAM SECTION ================= -->
+    <section class="section section-dark" id="team" style="background: #0B1120;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.3); color: #FF6B00; font-size: 0.75rem; padding: 0.25rem 0.85rem; border-radius: 99px;">• OUR TEAM •</span>
+          <h2 class="section-title" style="font-size: 2.8rem; font-weight: 900; margin-top: 0.5rem; margin-bottom: 0.5rem;">The Minds Behind Upscale</h2>
+          <p class="section-subtitle" style="color: #94A3B8; font-size: 1.05rem;">A team of passionate professionals with diverse expertise, working together to deliver exceptional digital solutions.</p>
+        </div>
+
+        <div class="team-grid-container">
+          <!-- Top Row: 4 cards -->
+          <div class="team-row team-row-top">
+            <!-- Susanth -->
+            <div class="team-card-exact">
+              <div class="team-avatar-circle">S</div>
+              <h3 class="team-card-name">Sushanth</h3>
+              <p class="team-card-role">Full-Stack Developer &<br>AI Engineer</p>
+              <div class="team-divider"><span>•</span></div>
+              <div class="team-tags-grid">
+                <span class="team-tag-pill">• Full-Stack Dev</span>
+                <span class="team-tag-pill">• AI Engineering</span>
+                <span class="team-tag-pill">• App Dev</span>
+                <span class="team-tag-pill">• AI Solutions</span>
+              </div>
+            </div>
+
+            <!-- Abhilash -->
+            <div class="team-card-exact">
+              <div class="team-avatar-circle">A</div>
+              <h3 class="team-card-name">Abhilash</h3>
+              <p class="team-card-role">Backend Developer &<br>Researcher</p>
+              <div class="team-divider"><span>•</span></div>
+              <div class="team-tags-grid">
+                <span class="team-tag-pill">• Backend Dev</span>
+                <span class="team-tag-pill">• REST APIs</span>
+                <span class="team-tag-pill">• Databases</span>
+                <span class="team-tag-pill">• System Logic</span>
+              </div>
+            </div>
+
+            <!-- Vasavi -->
+            <div class="team-card-exact">
+              <div class="team-avatar-circle">V</div>
+              <h3 class="team-card-name">Vasavi</h3>
+              <p class="team-card-role">Prompt Engineer &<br>Full-Stack Developer</p>
+              <div class="team-divider"><span>•</span></div>
+              <div class="team-tags-grid">
+                <span class="team-tag-pill">• Prompt Engineering</span>
+                <span class="team-tag-pill">• React.js</span>
+                <span class="team-tag-pill">• Full-Stack</span>
+                <span class="team-tag-pill">• AI Integration</span>
+              </div>
+            </div>
+
+            <!-- Srinivasa -->
+            <div class="team-card-exact">
+              <div class="team-avatar-circle">S</div>
+              <h3 class="team-card-name">Srinivasa</h3>
+              <p class="team-card-role">Backend Developer<br>&nbsp;</p>
+              <div class="team-divider"><span>•</span></div>
+              <div class="team-tags-grid">
+                <span class="team-tag-pill">• Backend Dev</span>
+                <span class="team-tag-pill">• REST APIs</span>
+                <span class="team-tag-pill">• DB Integration</span>
+                <span class="team-tag-pill">• Server Logic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Row: 3 cards centered -->
+          <div class="team-row team-row-bottom">
+            <!-- Nagaraju -->
+            <div class="team-card-exact">
+              <div class="team-avatar-circle">N</div>
+              <h3 class="team-card-name">Nagaraju</h3>
+              <p class="team-card-role">Frontend & Backend<br>Developer</p>
+              <div class="team-divider"><span>•</span></div>
+              <div class="team-tags-grid">
+                <span class="team-tag-pill">• Frontend Dev</span>
+                <span class="team-tag-pill">• React.js</span>
+                <span class="team-tag-pill">• Backend Dev</span>
+                <span class="team-tag-pill">• REST APIs</span>
+              </div>
+            </div>
+
+            <!-- Hima Teja -->
+            <div class="team-card-exact">
+              <div class="team-avatar-circle">H</div>
+              <h3 class="team-card-name">Hima Teja</h3>
+              <p class="team-card-role">QA Engineer /<br>Software Tester</p>
+              <div class="team-divider"><span>•</span></div>
+              <div class="team-tags-grid">
+                <span class="team-tag-pill">• Manual Testing</span>
+                <span class="team-tag-pill">• API Testing</span>
+                <span class="team-tag-pill">• DB Testing</span>
+                <span class="team-tag-pill">• QA</span>
+              </div>
+            </div>
+
+            <!-- Venkat -->
+            <div class="team-card-exact">
+              <div class="team-avatar-circle">V</div>
+              <h3 class="team-card-name">Venkat</h3>
+              <p class="team-card-role">Marketing &<br>Client Relations</p>
+              <div class="team-divider"><span>•</span></div>
+              <div class="team-tags-grid">
+                <span class="team-tag-pill">• Digital Marketing</span>
+                <span class="team-tag-pill">• Client Relations</span>
+                <span class="team-tag-pill">• Brand Strategy</span>
+                <span class="team-tag-pill">• Project Outreach</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Highlight Banner -->
+        <div class="team-bottom-banner">
+          <div class="team-banner-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="team-banner-text">Different strengths. One goal. We collaborate, innovate, and deliver <span style="color: #FF6B00; font-weight: 800;">impactful solutions</span> for your business.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 7. PROJECTS SECTION ================= -->
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Our Work</h2>
+          <p class="section-subtitle">Turning technical expertise into practical digital solutions.</p>
+        </div>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Applications</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+          <button class="filter-btn" data-filter="ai">AI Solutions</button>
+          <button class="filter-btn" data-filter="backend">Backend & QA</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Dynamically populated by JS script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 8. DEVELOPMENT PROCESS ================= -->
+    <section class="section section-dark" id="process" style="background: #0B1120;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.3); color: #FF6B00; font-size: 0.75rem; padding: 0.25rem 0.85rem; border-radius: 99px;">• METHODOLOGY •</span>
+          <h2 class="section-title" style="font-size: 2.8rem; font-weight: 900; margin-top: 0.5rem; margin-bottom: 0.5rem;">How We Work</h2>
+          <p class="section-subtitle" style="color: #94A3B8; font-size: 1.05rem;">Structured, six-step engineering workflow ensuring reliable project outcomes.</p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step-card">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Understand</h3>
+            <p class="step-desc">We understand the client's idea, requirements, target users, features, and overall business objectives.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Plan</h3>
+            <p class="step-desc">We analyze requirements and define technical stack, architecture, database schemas, and sprint roadmap.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Develop</h3>
+            <p class="step-desc">Our team builds responsive frontend views, robust backend APIs, database models, and AI integrations.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Test</h3>
+            <p class="step-desc">Our QA team performs manual, REST API, database state, regression, and retesting verification.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-num">05</div>
+            <h3 class="step-title">Review</h3>
+            <p class="step-desc">We review completed functionality against client acceptance criteria and refine user experience.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="step-num">06</div>
+            <h3 class="step-title">Deliver</h3>
+            <p class="step-desc">We deliver the complete, tested digital solution according to specified production requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. WHY UPSCALE ================= -->
+    <section class="section section-dark" id="why-us" style="background: #0B1120;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.3); color: #FF6B00; font-size: 0.75rem; padding: 0.25rem 0.85rem; border-radius: 99px;">• VALUE PROPOSITION •</span>
+          <h2 class="section-title" style="font-size: 2.8rem; font-weight: 900; margin-top: 0.5rem; margin-bottom: 0.5rem;">Why Choose Upscale?</h2>
+          <p class="section-subtitle" style="color: #94A3B8; font-size: 1.05rem;">A balanced team offering end-to-end technical execution.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-users-gear"></i></div>
+            <h3>Diverse Technical Expertise</h3>
+            <p>A team with complementary skills across full-stack development, AI engineering, backend systems, and software QA.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-infinity"></i></div>
+            <h3>End-to-End Capability</h3>
+            <p>We contribute across the full software development lifecycle—from initial requirements to tested product delivery.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>Modern Technology</h3>
+            <p>We build with modern frameworks, languages, databases, cloud infrastructure, and AI engineering practices.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Quality Focus</h3>
+            <p>Development and QA software testers work side-by-side throughout the project to ensure stability and accuracy.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Collaborative Approach</h3>
+            <p>Multiple specialists collaborate seamlessly to address complex technical logic and product requirements.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Professional Delivery</h3>
+            <p>Clear requirements analysis, structured development schedules, rigorous testing, and transparent communication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 10. CTA MARKETING BANNER ================= -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card">
+          <h2>Have an Idea? Let's Build It.</h2>
+          <p>Whether you need a website, mobile application, backend system, AI-powered solution, API integration, or software testing, Upscale brings the technical expertise and collaborative approach to turn your requirements into a working product.</p>
+          <div class="cta-banner-btns">
+            <a href="#contact" class="btn btn-primary">Start Your Project <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-secondary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 11. CONTACT SECTION ================= -->
+    <section class="section section-dark" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">Tell us about your project and let's explore how Upscale can help.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-box">
+            <h3>Direct Contact</h3>
+            <p style="color: var(--text-light); margin-bottom: 2.5rem; font-size: 0.95rem;">Reach out to our team directly via phone, email, or LinkedIn.</p>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-details">
+                <label>Phone</label>
+                <a href="tel:+919063593070">+91 9063593070</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-details">
+                <label>Email</label>
+                <a href="mailto:upscale.careersupport@gmail.com">upscale.careersupport@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="contact-details">
+                <label>LinkedIn</label>
+                <a href="https://www.linkedin.com/in/upscale-881a3642a/" target="_blank" rel="noopener">Upscale Profile</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-box">
+            <div id="form-alert" class="form-alert"></div>
+            
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Your Full Name *</label>
+                <input type="text" id="name" class="form-input" placeholder="e.g. Your Name" required>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" class="form-input" placeholder="Email@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="project-type" class="form-label">Project Type *</label>
+                <select id="project-type" class="form-select" required>
+                  <option value="" disabled selected>Select Project Type</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Mobile Application">Mobile Application</option>
+                  <option value="Full-Stack Development">Full-Stack Development</option>
+                  <option value="AI Solution">AI Solution</option>
+                  <option value="Backend/API">Backend / API</option>
+                  <option value="Software Testing">Software Testing</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Project Details & Requirements *</label>
+                <textarea id="message" class="form-textarea" placeholder="Tell us about your project goals, timelines, and technical requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-paper-plane fa-solid"></i> Send Project Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 12. FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-dark-mode.png" alt="Upscale Logo" class="footer-logo-img">
+          <div class="footer-tagline">Ideas • Code • Grow</div>
+          <p>A professional technology team delivering modern software, AI, development, and testing solutions.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#technologies">Technologies</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Full-Stack Development</a></li>
+            <li><a href="#services">AI Engineering</a></li>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Mobile Development</a></li>
+            <li><a href="#services">Backend Development</a></li>
+            <li><a href="#services">Software Testing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Info</h4>
+          <ul class="footer-links">
+            <li style="color: #FFFFFF; font-weight: 600;"><i class="fa-solid fa-phone" style="color: var(--primary-orange); margin-right: 0.5rem;"></i> +91 9063593070</li>
+            <li><a href="mailto:upscale.careersupport@gmail.com"><i class="fa-solid fa-envelope" style="color: var(--primary-orange); margin-right: 0.5rem;"></i> upscale.careersupport@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/upscale-881a3642a/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" style="color: var(--primary-orange); margin-right: 0.5rem;"></i> LinkedIn Profile</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Upscale. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Custom Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
