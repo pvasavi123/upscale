@@ -293,6 +293,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Background Particles Canvas */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -321,6 +332,7 @@ img, svg {
 .section {
   padding: 6rem 0;
   position: relative;
+  z-index: 1;
 }
 
 .section-dark {
@@ -569,6 +581,7 @@ body:not(.light-mode) .brand-logo-light {
   align-items: center;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -1351,6 +1364,7 @@ body:not(.light-mode) .brand-logo-light {
   background: linear-gradient(135deg, #0A0F1D 0%, #1A0B00 100%);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .cta-banner-card {
@@ -1520,6 +1534,8 @@ body:not(.light-mode) .brand-logo-light {
   padding-top: 2.25rem;
   padding-bottom: 1.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
 .footer-grid {

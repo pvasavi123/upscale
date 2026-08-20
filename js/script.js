@@ -12,7 +12,7 @@ const projectsData = [
     description: "Comprehensive web platform for managing student records, course enrollments, faculty allocations, attendance tracking, and institutional administration.",
     technologies: ["React.js", "Bootstrap", "Spring Boot", "Java", "MySQL"],
     badge: "Web Application",
-    github: "https://github.com/Mandhalasushanth",
+    github: "https://github.com/pvasavi123/collage-management-system-using-html-css-js",
     live: "https://deft-malabi-1665bb.netlify.app/",
     image: "assets/projects/college-management.png"
   },
@@ -40,13 +40,14 @@ const projectsData = [
   },
   {
     id: 4,
-    name: "Python Quiz Application",
+    name: "Quiz Application",
     category: "backend",
     description: "A terminal or console-based interactive quiz application written in Python to test user knowledge with custom question banks.",
-    technologies: ["Python"],
-    badge: "Python Tool",
-    github: "https://github.com/Mandhalasushanth",
-    live: ""
+    technologies: ["web technologies"],
+   
+    github: "https://github.com/pvasavi123/quizapp",
+  
+    image: "assets/projects/quiz.png"
   },
   {
     id: 5,
@@ -67,7 +68,8 @@ const projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     badge: "Utility",
     github: "https://github.com/Mandhalasushanth",
-    live: "https://basic-calculator-r5mpibr7k-mandhalasushanths-projects.vercel.app/"
+    live: "https://basic-calculator-r5mpibr7k-mandhalasushanths-projects.vercel.app/",
+    image: "assets/projects/calender.jpg"
   },
   {
     id: 7,
@@ -77,7 +79,8 @@ const projectsData = [
     technologies: ["HTML", "CSS", "JavaScript", "Web Speech API"],
     badge: "API Integration",
     github: "https://github.com/Mandhalasushanth",
-    live: "https://text-to-speech-converter-git-main-mandhalasushanths-projects.vercel.app/"
+    live: "https://text-to-speech-converter-git-main-mandhalasushanths-projects.vercel.app/",
+    image: "assets/projects/speech.png"
   },
   {
     id: 8,
@@ -86,8 +89,9 @@ const projectsData = [
     description: "An advanced computer vision application using AI/ML techniques to virtually try on clothing/apparel on user models in real time.",
     technologies: ["AI/ML", "Computer Vision", "Python"],
     badge: "Computer Vision",
-    github: "",
-    live: "https://try-fit-main-git-main-mandhalasushanths-projects.vercel.app/"
+    
+    live: "https://try-fit-main-git-main-mandhalasushanths-projects.vercel.app/",
+    image: "assets/projects/try.jpg"
   },
   {
     id: 9,
@@ -96,8 +100,8 @@ const projectsData = [
     description: "A modern peer-to-peer rental mobile application allowing users to list, browse, and rent items, equipment, or properties seamlessly.",
     technologies: ["React Native", "Expo", "Firebase", "JavaScript"],
     badge: "Mobile App",
-    github: "https://github.com/Mandhalasushanth",
-    live: ""
+   
+    image: "assets/projects/rento.jpg"
   }
 ];
 
@@ -108,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilters();
   initFormValidation();
   initBackToTop();
-  initScrollAnimations();
+  initGSAPAnimations();
 });
 
 /* --- LIGHT / DARK THEME TOGGLE --- */
@@ -198,14 +202,15 @@ function highlightNavOnScroll() {
 }
 
 /* --- DYNAMIC PROJECTS RENDER --- */
+// Updated project rendering with image fallback and conditional buttons
 function renderProjects(filterCategory) {
   const grid = document.getElementById('projects-grid');
   if (!grid) return;
 
   grid.innerHTML = '';
 
-  const filteredProjects = filterCategory === 'all' 
-    ? projectsData 
+  const filteredProjects = filterCategory === 'all'
+    ? projectsData
     : projectsData.filter(p => p.category === filterCategory);
 
   if (filteredProjects.length === 0) {
@@ -219,16 +224,20 @@ function renderProjects(filterCategory) {
 
     const techPills = proj.technologies.map(tech => `<span class="p-tech-pill">${tech}</span>`).join('');
     const targetAttr = proj.live && proj.live !== '#' ? 'target="_blank" rel="noopener noreferrer"' : '';
-    
-    let iconClass = 'fa-code';
-    if (proj.name.includes('College') || proj.name.includes('Management')) iconClass = 'fa-graduation-cap';
-    else if (proj.category === 'ai') iconClass = 'fa-robot';
-    else if (proj.category === 'mobile') iconClass = 'fa-mobile-screen-button';
-    else if (proj.badge.includes('Backend') || proj.badge.includes('Quality')) iconClass = 'fa-server';
 
-    const imgContent = proj.image 
-      ? `<img src="${proj.image}" alt="${proj.name}" style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: var(--radius-md) var(--radius-md) 0 0;">`
-      : `<div style="font-size: 3rem; color: var(--primary-orange); opacity: 0.8;"><i class="fa-solid ${iconClass}"></i></div>`;
+    // Determine fallback icon if no image
+    const imgContent = proj.image
+      ? `<img src="${proj.image}" alt="${proj.name}" style="width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: var(--radius-md) var(--radius-md) 0 0;" />`
+      : `<div style="font-size: 3rem; color: var(--primary-orange); opacity: 0.8; display:flex; align-items:center; justify-content:center; height:100%;"><i class="fa-solid fa-image"></i></div>`;
+
+    // Conditional button rendering
+    const githubBtn = proj.github && proj.github.trim() !== ''
+      ? `<a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="project-btn btn-secondary" style="background: rgba(255,255,255,0.06); border: 1px solid var(--dark-border); flex: 1; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;"><i class="fa-brands fa-github"></i> GitHub</a>`
+      : '';
+
+    const liveBtn = proj.live && proj.live.trim() !== '' && proj.live !== '#'
+      ? `<a href="${proj.live}" ${targetAttr} class="project-btn btn-primary" style="padding: 0.6rem; flex: 1; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>`
+      : '';
 
     card.innerHTML = `
       <div class="project-img-box" style="height: 200px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: rgba(0,0,0,0.2); position: relative;">
@@ -240,24 +249,8 @@ function renderProjects(filterCategory) {
         <p class="project-desc">${proj.description}</p>
         <div class="project-techs">${techPills}</div>
         <div class="project-links" style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-          ${proj.github ? `
-            <a href="${proj.github}" target="_blank" rel="noopener noreferrer" class="project-btn btn-secondary" style="background: rgba(255,255,255,0.06); border: 1px solid var(--dark-border); flex: 1; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-          ` : `
-            <span class="project-btn btn-secondary" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.25); cursor: not-allowed; flex: 1; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-              <i class="fa-brands fa-github"></i> Private Repo
-            </span>
-          `}
-          ${proj.live ? `
-            <a href="${proj.live}" ${targetAttr} class="project-btn btn-primary" style="padding: 0.6rem; flex: 1; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </a>
-          ` : `
-            <span class="project-btn btn-primary" style="background: rgba(255,107,0,0.15); border: 1px solid rgba(255,107,0,0.15); color: rgba(255,255,255,0.3); cursor: not-allowed; padding: 0.6rem; flex: 1; text-align: center; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-              <i class="fa-solid fa-ban"></i> Offline
-            </span>
-          `}
+          ${githubBtn}
+          ${liveBtn}
         </div>
       </div>
     `;
@@ -336,39 +329,120 @@ function initBackToTop() {
   });
 }
 
-/* --- SCROLL REVEAL & STAGGER ANIMATIONS --- */
-function initScrollAnimations() {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -40px 0px"
-  };
+/* --- SCROLL REVEAL & STAGGER ANIMATIONS (GSAP ScrollTrigger) --- */
+function initGSAPAnimations() {
+  // Register GSAP ScrollTrigger plugin
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+  }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+  // Initialize background particles
+  initBackgroundParticles();
 
-  const animatedSelectors = '.service-card, .feature-card, .team-card, .tech-category-card, .why-card, .process-step-card, .stat-card, .hero-visual-card, .section-header, .about-card';
+  // --- Hero entrance animation ---
+  const heroContent = document.querySelector('.hero-content');
+  const heroVisual = document.querySelector('.hero-visual');
+  if (typeof gsap !== 'undefined') {
+    if (heroContent) {
+      gsap.from(heroContent, { opacity: 0, x: -60, duration: 1, ease: 'power3.out', delay: 0.3 });
+    }
+    if (heroVisual) {
+      gsap.from(heroVisual, { opacity: 0, x: 60, duration: 1, ease: 'power3.out', delay: 0.5 });
+    }
+  }
+
+  // --- Scroll-triggered section reveals ---
+  const animatedSelectors = '.service-card, .feature-card, .team-card, .tech-category-card, .why-card, .process-step-card, .stat-card, .hero-visual-card, .section-header, .about-card, .about-highlight-box, .contact-info-box, .contact-form-box, .cta-banner-card';
   const animatedElements = document.querySelectorAll(animatedSelectors);
 
-  // Group elements by parent to calculate stagger indices
-  const parents = new Set();
-  animatedElements.forEach(el => {
-    el.classList.add('reveal-on-scroll');
-    const parent = el.parentElement;
-    if (parent) {
-      if (!parents.has(parent)) {
-        parents.add(parent);
-        const children = Array.from(parent.children).filter(child => child.matches(animatedSelectors));
-        children.forEach((child, index) => {
-          child.style.setProperty('--reveal-index', index);
-        });
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    // Group elements by parent for staggered animation
+    const parentMap = new Map();
+    animatedElements.forEach(el => {
+      const parent = el.parentElement;
+      if (!parentMap.has(parent)) {
+        parentMap.set(parent, []);
       }
-    }
-    observer.observe(el);
+      parentMap.get(parent).push(el);
+    });
+
+    parentMap.forEach((children) => {
+      children.forEach((el, index) => {
+        gsap.from(el, {
+          opacity: 0,
+          y: 50,
+          scale: 0.97,
+          duration: 0.7,
+          delay: index * 0.08,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            toggleActions: 'play none none none'
+          }
+        });
+      });
+    });
+  } else {
+    // Fallback: use IntersectionObserver if GSAP is not loaded
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    animatedElements.forEach((el, index) => {
+      el.classList.add('reveal-on-scroll');
+      el.style.setProperty('--reveal-index', index);
+      observer.observe(el);
+    });
+  }
+}
+
+/* --- BACKGROUND PARTICLES (tsParticles) --- */
+function initBackgroundParticles() {
+  if (typeof tsParticles === 'undefined') return;
+
+  tsParticles.load('bg-canvas', {
+    fpsLimit: 60,
+    background: { color: { value: 'transparent' } },
+    particles: {
+      color: { value: '#FF6B00' },
+      number: { value: 60, density: { enable: true, area: 900 } },
+      size: { value: { min: 1, max: 3 } },
+      move: {
+        enable: true,
+        speed: 0.8,
+        direction: 'none',
+        random: true,
+        straight: false,
+        outModes: { default: 'out' }
+      },
+      opacity: {
+        value: { min: 0.15, max: 0.5 },
+        animation: { enable: true, speed: 0.8, minimumValue: 0.1, sync: false }
+      },
+      links: {
+        enable: true,
+        distance: 120,
+        color: '#FF6B00',
+        opacity: 0.12,
+        width: 1
+      }
+    },
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: 'grab' },
+        resize: true
+      },
+      modes: {
+        grab: { distance: 140, links: { opacity: 0.3 } }
+      }
+    },
+    detectRetina: true
   });
 }
