@@ -19,18 +19,6 @@ Official corporate portfolio website for **Upscale**, a 6-member software develo
 * **Logic:** Vanilla JavaScript (ES6+, DOM Manipulation, IntersectionObserver, Client-side validation)
 * **Icons:** FontAwesome 6
 
----
-
-## 👥 The Upscale Team
-1. **Susanth** — Full-Stack Developer & AI Engineer
-2. **Abhilash** — Backend Developer & Researcher
-3. **Vasavi** — Prompt Engineer & Full-Stack Developer
-4. **Srinivasa** — Backend Developer
-5. **Nagaraju** — Frontend & Backend Developer
-6. **Hima Teja** — QA Engineer / Software Tester
-7. **Venkat** — Marketing & Client Relations
-
----
 
 ## 📂 File Structure
 ```
