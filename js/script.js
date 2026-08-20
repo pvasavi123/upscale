@@ -240,13 +240,15 @@ function renderProjects(filterCategory) {
       : '';
 
     card.innerHTML = `
-      <div class="project-img-box" style="height: 200px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: rgba(0,0,0,0.2); position: relative;">
+      <div class="project-img-box" style="display: flex; align-items: center; justify-content: center; overflow: hidden; background: rgba(0,0,0,0.2); position: relative;">
         ${imgContent}
         <span class="project-badge" style="position: absolute; top: 12px; right: 12px; z-index: 2;">${proj.badge}</span>
       </div>
       <div class="project-body">
-        <h3 class="project-title">${proj.name}</h3>
-        <p class="project-desc">${proj.description}</p>
+        <div class="project-info">
+          <h3 class="project-title">${proj.name}</h3>
+          <p class="project-desc">${proj.description}</p>
+        </div>
         <div class="project-techs">${techPills}</div>
         <div class="project-links" style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
           ${githubBtn}
@@ -343,11 +345,26 @@ function initGSAPAnimations() {
   const heroContent = document.querySelector('.hero-content');
   const heroVisual = document.querySelector('.hero-visual');
   if (typeof gsap !== 'undefined') {
+    const isMobile = window.innerWidth <= 768;
     if (heroContent) {
-      gsap.from(heroContent, { opacity: 0, x: -60, duration: 1, ease: 'power3.out', delay: 0.3 });
+      gsap.from(heroContent, {
+        opacity: 0,
+        x: isMobile ? 0 : -60,
+        y: isMobile ? 30 : 0,
+        duration: 1,
+        ease: 'power3.out',
+        delay: 0.3
+      });
     }
     if (heroVisual) {
-      gsap.from(heroVisual, { opacity: 0, x: 60, duration: 1, ease: 'power3.out', delay: 0.5 });
+      gsap.from(heroVisual, {
+        opacity: 0,
+        x: isMobile ? 0 : 60,
+        y: isMobile ? 30 : 0,
+        duration: 1,
+        ease: 'power3.out',
+        delay: 0.5
+      });
     }
   }
 
