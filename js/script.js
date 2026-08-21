@@ -463,3 +463,63 @@ function initBackgroundParticles() {
     detectRetina: true
   });
 }
+
+/* =====================================================
+   PREMIUM PROCESS SECTION ANIMATION
+   Reveals .pstep cards with staggered transitions,
+   animates the horizontal connector progress line,
+   and reveals the footer banner.
+===================================================== */
+function initProcessAnimation() {
+  const psteps = document.querySelectorAll('.pstep');
+  const connectorProgress = document.querySelector('.process-connector-progress');
+  const footerBanner = document.querySelector('.process-footer-banner');
+  const processSection = document.getElementById('process');
+
+  if (!processSection || psteps.length === 0) return;
+
+  let progressAnimated = false;
+  let bannerAnimated = false;
+
+  // IntersectionObserver for individual step cards
+  const stepObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        stepObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  psteps.forEach(step => stepObserver.observe(step));
+
+  // IntersectionObserver for the whole section → trigger connector + banner
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Animate horizontal connector progress line (desktop only)
+        if (!progressAnimated && connectorProgress && window.innerWidth > 768) {
+          setTimeout(() => {
+            connectorProgress.classList.add('animate');
+          }, 300);
+          progressAnimated = true;
+        }
+
+        // Reveal footer banner with delay
+        if (!bannerAnimated && footerBanner) {
+          setTimeout(() => {
+            footerBanner.classList.add('revealed');
+          }, 800);
+          bannerAnimated = true;
+        }
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sectionObserver.observe(processSection);
+}
+
+// Call it on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  initProcessAnimation();
+});

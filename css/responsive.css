@@ -60,11 +60,29 @@ html, body {
   }
 }
 
-/* Form layouts on mobile */
-@media (max-width: 576px) {
+/* Ensure all form elements never overflow their container */
+.form-input,
+.form-select,
+.form-textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Collapse email/phone 2-col grid on tablet & mobile */
+@media (max-width: 768px) {
   .form-grid-2col {
     grid-template-columns: 1fr !important;
     gap: 0 !important;
+  }
+}
+
+/* Form box padding reduction on mobile */
+@media (max-width: 576px) {
+  .contact-form-box {
+    padding: 1.25rem !important;
+  }
+  .contact-info-box {
+    padding: 1.25rem !important;
   }
 }
 
@@ -121,6 +139,13 @@ html, body {
   .contact-form-box,
   .cta-banner-card,
   .hero-visual-card {
-    padding: 1.5rem !important;
+    padding: 1.25rem !important;
+  }
+
+  /* Prevent contact link text from overflowing */
+  .contact-details a,
+  .contact-details p {
+    font-size: 0.9rem !important;
+    word-break: break-all;
   }
 }

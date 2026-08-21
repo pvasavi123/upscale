@@ -391,53 +391,121 @@
     </section>
 
     <!-- ================= 8. DEVELOPMENT PROCESS ================= -->
-    <section class="section section-dark" id="process" style="background: #0B1120;">
+    <section class="section" id="process">
+      <div class="process-bg-glow"></div>
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag" style="background: rgba(255,107,0,0.1); border: 1px solid rgba(255,107,0,0.3); color: #FF6B00; font-size: 0.75rem; padding: 0.25rem 0.85rem; border-radius: 99px;">• METHODOLOGY •</span>
-          <h2 class="section-title" style="font-size: 2.8rem; font-weight: 900; margin-top: 0.5rem; margin-bottom: 0.5rem;">How We Work</h2>
-          <p class="section-subtitle" style="color: #94A3B8; font-size: 1.05rem;">Structured, six-step engineering workflow ensuring reliable project outcomes.</p>
+        <div class="section-header" data-animate="process-header">
+          <span class="section-tag process-tag">• METHODOLOGY •</span>
+          <h2 class="section-title process-section-title">How We Work</h2>
+          <p class="section-subtitle process-section-subtitle">A structured six-step engineering workflow built to deliver reliable, production-ready digital products.</p>
         </div>
 
-        <div class="process-timeline">
-          <div class="process-step-card">
-            <div class="step-num">01</div>
-            <h3 class="step-title">Understand</h3>
-            <p class="step-desc">We understand the client's idea, requirements, target users, features, and overall business objectives.</p>
+        <div class="process-track">
+          <!-- Connector line (desktop) -->
+          <div class="process-connector">
+            <div class="process-connector-line"></div>
+            <div class="process-connector-progress"></div>
           </div>
 
-          <div class="process-step-card">
-            <div class="step-num">02</div>
-            <h3 class="step-title">Plan</h3>
-            <p class="step-desc">We analyze requirements and define technical stack, architecture, database schemas, and sprint roadmap.</p>
+          <!-- Step 1 -->
+          <div class="pstep" data-step="1">
+            <div class="pstep-node">
+              <span class="pstep-node-num">01</span>
+              <div class="pstep-node-ring"></div>
+            </div>
+            <div class="pstep-card">
+              <div class="pstep-icon-wrap">
+                <i class="fa-solid fa-magnifying-glass-chart pstep-icon"></i>
+              </div>
+              <h3 class="pstep-title">Understand</h3>
+              <p class="pstep-desc">We listen deeply to your idea, map out target users, features, and business objectives before touching a single line of code.</p>
+              <div class="pstep-glow"></div>
+            </div>
           </div>
 
-          <div class="process-step-card">
-            <div class="step-num">03</div>
-            <h3 class="step-title">Develop</h3>
-            <p class="step-desc">Our team builds responsive frontend views, robust backend APIs, database models, and AI integrations.</p>
+          <!-- Step 2 -->
+          <div class="pstep" data-step="2">
+            <div class="pstep-node">
+              <span class="pstep-node-num">02</span>
+              <div class="pstep-node-ring"></div>
+            </div>
+            <div class="pstep-card">
+              <div class="pstep-icon-wrap">
+                <i class="fa-solid fa-sitemap pstep-icon"></i>
+              </div>
+              <h3 class="pstep-title">Plan</h3>
+              <p class="pstep-desc">We define the tech stack, architecture, database schemas, and sprint roadmap — turning requirements into a clear technical blueprint.</p>
+              <div class="pstep-glow"></div>
+            </div>
           </div>
 
-          <div class="process-step-card">
-            <div class="step-num">04</div>
-            <h3 class="step-title">Test</h3>
-            <p class="step-desc">Our QA team performs manual, REST API, database state, regression, and retesting verification.</p>
+          <!-- Step 3 -->
+          <div class="pstep" data-step="3">
+            <div class="pstep-node">
+              <span class="pstep-node-num">03</span>
+              <div class="pstep-node-ring"></div>
+            </div>
+            <div class="pstep-card">
+              <div class="pstep-icon-wrap">
+                <i class="fa-solid fa-code pstep-icon"></i>
+              </div>
+              <h3 class="pstep-title">Develop</h3>
+              <p class="pstep-desc">Our engineers build responsive frontend views, robust backend APIs, database models, and AI integrations — collaboratively and iteratively.</p>
+              <div class="pstep-glow"></div>
+            </div>
           </div>
 
-          <div class="process-step-card">
-            <div class="step-num">05</div>
-            <h3 class="step-title">Review</h3>
-            <p class="step-desc">We review completed functionality against client acceptance criteria and refine user experience.</p>
+          <!-- Step 4 -->
+          <div class="pstep" data-step="4">
+            <div class="pstep-node">
+              <span class="pstep-node-num">04</span>
+              <div class="pstep-node-ring"></div>
+            </div>
+            <div class="pstep-card">
+              <div class="pstep-icon-wrap">
+                <i class="fa-solid fa-vial-circle-check pstep-icon"></i>
+              </div>
+              <h3 class="pstep-title">Test</h3>
+              <p class="pstep-desc">Our QA team runs manual, REST API, database state, regression, and retesting cycles to ensure every feature performs correctly.</p>
+              <div class="pstep-glow"></div>
+            </div>
           </div>
 
-          <div class="process-step-card">
-            <div class="step-num">06</div>
-            <h3 class="step-title">Deliver</h3>
-            <p class="step-desc">We deliver the complete, tested digital solution according to specified production requirements.</p>
+          <!-- Step 5 -->
+          <div class="pstep" data-step="5">
+            <div class="pstep-node">
+              <span class="pstep-node-num">05</span>
+              <div class="pstep-node-ring"></div>
+            </div>
+            <div class="pstep-card">
+              <div class="pstep-icon-wrap">
+                <i class="fa-solid fa-circle-check pstep-icon"></i>
+              </div>
+              <h3 class="pstep-title">Review</h3>
+              <p class="pstep-desc">We validate completed features against client acceptance criteria and refine the UX for a polished, client-approved product.</p>
+              <div class="pstep-glow"></div>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="pstep" data-step="6">
+            <div class="pstep-node">
+              <span class="pstep-node-num">06</span>
+              <div class="pstep-node-ring"></div>
+            </div>
+            <div class="pstep-card pstep-card--final">
+              <div class="pstep-icon-wrap pstep-icon-wrap--final">
+                <i class="fa-solid fa-rocket pstep-icon"></i>
+              </div>
+              <h3 class="pstep-title">Deliver</h3>
+              <p class="pstep-desc">We hand off the complete, tested digital product — deployment-ready, documented, and built to your production requirements.</p>
+              <div class="pstep-glow pstep-glow--final"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+     
+
 
     <!-- ================= 9. WHY UPSCALE ================= -->
     <section class="section section-dark" id="why-us" style="background: #0B1120;">
