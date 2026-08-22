@@ -92,16 +92,6 @@ const projectsData = [
     
     live: "https://try-fit-main-git-main-mandhalasushanths-projects.vercel.app/",
     image: "assets/projects/try.jpg"
-  },
-  {
-    id: 9,
-    name: "Rennto",
-    category: "mobile",
-    description: "A modern peer-to-peer rental mobile application allowing users to list, browse, and rent items, equipment, or properties seamlessly.",
-    technologies: ["React Native", "Expo", "Firebase", "JavaScript"],
-    badge: "Mobile App",
-   
-    image: "assets/projects/rento.jpg"
   }
 ];
 
